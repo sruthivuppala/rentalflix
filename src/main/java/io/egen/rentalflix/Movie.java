@@ -13,6 +13,8 @@ public class Movie {
 	private String title;
 	private String year;
 	private String language;
+	private boolean rented;
+	public boolean setRented;
 	
 	public Movie(){
 		
@@ -25,14 +27,18 @@ public class Movie {
 		this.title = title;
 		this.year = year;
 		this.language = language;
+		this.rented = false;
 	}
+	
 	public Movie(String id,String title, String year, String language) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.language = language;
+		this.rented = false;
 	}
+	
 	public String getId() {
 		return id;
 	}
@@ -57,12 +63,20 @@ public class Movie {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
+	
+	public boolean getRented() {
+		return rented;
+	}
+
+	public void setRented(boolean rented) {
+		this.rented = rented;
+	}
 
 	@Override
 	public int hashCode() {
 		return Integer.parseInt(id);
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -94,6 +108,4 @@ public class Movie {
 			return false;
 		return true;
 	}
-	
-	
 }

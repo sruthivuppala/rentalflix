@@ -97,7 +97,8 @@ public class MovieService implements IFlix {
 		Iterator<Movie> itr = movies.iterator();
 		while(itr.hasNext()){
 			m = itr.next();
-			if(m.getTitle() == movieTitle){
+			if(m.getTitle() == movieTitle && m.getRented()==false){
+				m.setRented = true; 
 				return true;
 			}
 		}
